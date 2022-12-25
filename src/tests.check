@@ -1,0 +1,27 @@
+#include "load_object.h"
+#include "transform.h"
+#include <math.h>
+
+#test full
+Object *Model = NULL, *Orig_Model = NULL;
+Model = (Object*)calloc(1,sizeof(Object));
+Orig_Model = (Object*)calloc(1,sizeof(Object));
+parse("./models/for_tests/test_cube.obj", Model);
+parse("./models/for_tests/transformed_test_cube.obj", Orig_Model);
+
+ck_assert_int_eq(Model->count_vertex-1, 8);
+ck_assert_int_eq(Model->count_faces, 12);
+ck_assert_int_eq(Model->count_index, Orig_Model->count_index);
+
+scale(Model, Model->vertices, 3.2);
+rotate_vertices(Model, Model->vertices, 1.0, -2.7, 0.0);
+shift(Model, Model->vertices, 10, M_PI_4, M_PI_2, M_PI);
+
+for (unsigned i = 3; i < Orig_Model->count_vertex * 3; i++) {
+    ck_assert_int_eq((fabs(Model->vertices[i]-Orig_Model->vertices[i]))>1e-6,0);
+}
+
+free_object(Model);
+free_object(Orig_Model);
+if (Model) free(Model);
+if (Orig_Model) free(Orig_Model);
