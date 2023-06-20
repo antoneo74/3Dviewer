@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>3DViewer v1.0</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/docs/style.css">
-</head>
-
-<body>
-    <div class="wrapper">
-        <h1>3DViewer v1.0</h1>
-        <h2>Документация по использованию</h2>
+<h1>3DViewer v1.0</h1>
+<h2>Документация по использованию</h2>
         <hr>
         <h2>Общая информация</h2>
         <p>
@@ -38,10 +25,10 @@
             экспорта
             3D-объектов и поддерживается различным программным обеспечением трехмерного моделирования. <br>
         </p>
-        <h2>Основной функционал</h2>
+<h2>Основной функционал</h2>
         <p>
             При запуске программы открывается главное окно, на котором есть:
-            <img src="/docs/screen_1.png" alt="Главное окно" width="800" height="540">
+            <img src="/src/docs/screen_1.png" alt="Главное окно" width="800" height="540">
         <ul>
             <li>кнопка окрытия файла <strong>Open Model</strong></li>
             <li> текстовые блоки для вывода названия, количества ребер и вершин фигуры
@@ -62,6 +49,7 @@
             <li> блок <strong>Scale</strong>, отвечающий за масштабирование объекта</li>
             <li>кнопка выхода из программы <strong>Сlose</strong></li>
         </ul>
+        </p>
         <p>
             Выставленные пользователем настройки сохраняются между перезапусками программы, при условии, что в блоке
             <strong>Settings</strong> была нажата кнопка <strong>Save</strong>. Кнопка <strong>Reset</strong>
@@ -69,7 +57,7 @@
             сбросить настройки на изначальные.
         </p>
 
-        <h2>Запись</h2>
+<h2>Запись</h2>
         <p>
         <ul>
             <li>Программа позволяет сохранять полученные ("отрендеренные") изображения в файл в форматах bmp и
@@ -80,8 +68,5 @@
         </ul>
         </p>
 
-        <p>Разработчики: <strong>staunton</strong> и <strong>mullsher</strong></p>
-    </div>
-</body>
+<p>Разработчики: <strong>staunton</strong> и <strong>mullsher</strong></p>
 
-</html>
